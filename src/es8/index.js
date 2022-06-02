@@ -24,3 +24,28 @@ console.log(values.length);
 const string = "La tierra les dice Hola!!";
 console.log(string.padStart(49, "Buenos dias estrellitas "));
 console.log("Boys don't cry".padEnd(23, " The Cure"));
+
+//Asyn Await
+const helloWorld = () => {
+    return new Promise((resolve, reject) => {
+        (true)
+        ? setTimeout(() => resolve("Pascal Cadena"), 3000)
+        : reject(new Error("Test Error"))
+    })
+};
+
+const helloAsync = async () => {
+    const hello = await helloWorld();
+    console.log(hello);
+};
+helloAsync();
+
+const anotherFunction = async () => {
+    try {
+        const hellos = await helloWorld();
+        console.log(hellos);
+    } catch (error) {
+        console.log(error);
+    }
+};
+anotherFunction();
