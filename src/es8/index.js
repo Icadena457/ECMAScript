@@ -26,6 +26,7 @@ console.log(string.padStart(49, "Buenos dias estrellitas "));
 console.log("Boys don't cry".padEnd(23, " The Cure"));
 
 //Asyn Await
+//Forma #1
 const helloWorld = () => {
     return new Promise((resolve, reject) => {
         (true)
@@ -40,6 +41,7 @@ const helloAsync = async () => {
 };
 helloAsync();
 
+//Forma #2
 const anotherFunction = async () => {
     try {
         const hellos = await helloWorld();
